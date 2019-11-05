@@ -3,13 +3,11 @@ from dataclasses import dataclass
 
 @dataclass
 class Dier:
-    
-    def __init__(self):
-        self.naam = ""
-        self.soort = ""
-        self.aantalPoten = 0
-        self.kleur = ""
-        self.geluid = ""
+    naam : str
+    soort : ""
+    aantalPoten : 0
+    kleur : ""
+    geluid : ""
 
 def parse_line(line):
     naam, soort, aantalpoten, kleur, geluid = line.split(' - ')
@@ -30,4 +28,4 @@ if __name__ == '__main__':
         dieren = parse_text(f.read())
     
     for dier in dieren:
-        dier.print()
+        print(dier)
